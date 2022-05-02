@@ -27,6 +27,6 @@ steps:
   inputs:
     action: 'deploy'
     kubernetesServiceConnection: 'kubernetes-svc'
-    manifests: 'Kube-manifests'
-    artifact: 'Kube-manifests'
+    manifests: 'manifests'
+    artifact: 'manifests'
     publishLocation: 'pipeline'
