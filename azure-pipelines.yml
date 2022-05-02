@@ -23,5 +23,10 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'kubernetes-svc'
+    manifests: 'Kube-manifests'
     artifact: 'Kube-manifests'
     publishLocation: 'pipeline'
