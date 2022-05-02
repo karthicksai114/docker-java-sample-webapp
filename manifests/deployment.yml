@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: karthicksaidockerjavasamplewebapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karthicksaidockerjavasamplewebapp
+  template:
+    metadata:
+      labels:
+        app: karthicksaidockerjavasamplewebapp 
+    spec:
+      containers:
+        - name: karthicksaidockerjavasamplewebapp 
+          image: myprivateacrdemo.azurecr.io/karthicksaidockerjavasamplewebapp
+          ports:
+          - containerPort: 80
